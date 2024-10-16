@@ -1,0 +1,85 @@
+/* Cấu hình chung */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffccff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ff69b4;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+}
+
+.content p {
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.balloons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.balloon {
+    width: 100px;
+    height: 150px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.balloon:nth-child(odd) {
+    background-color: #ff1493;
+}
+
+.balloon:before {
+    content: '';
+    width: 10px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Hiệu ứng bóng bay nổi */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Thông điệp */
+.message {
+    font-size: 1.5rem;
+    color: #ff4500;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+}
